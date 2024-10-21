@@ -1,0 +1,69 @@
+.links{
+    display: flex;
+    justify-content: end;
+    padding: 10px;
+}
+
+main{
+    padding: 15px 30px;
+}
+
+.content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.content h1{
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.images{
+    margin-top: 50px;
+}
+
+.searchbar form{
+    display: flex;
+    align-items: center;
+}
+
+.searchbar form input:first-child{
+    margin-right: 5px;
+    height: 36px;
+    width: 300px;
+}
+
+.images{
+    border: 1px solid gray;
+    width: 100%;
+    padding: 15px;
+}
+
+.images h3{
+    text-align: center;
+}
+
+.images img{
+    max-width: 390px;
+}
+
+
+img{
+    max-width: 420px;
+    max-height: 400px;
+}
+
+.container-teste{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.image-box{
+    margin-bottom: 15px;
+}
+
+.image-box img{
+    border-radius: 3px;
+}
