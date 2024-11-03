@@ -23,6 +23,10 @@ main{
     margin-top: 50px;
 }
 
+#searchinput{
+    padding: 0 5px;
+}
+
 .searchbar form{
     display: flex;
     align-items: center;
@@ -38,6 +42,7 @@ main{
     border: 1px solid gray;
     width: 100%;
     padding: 15px;
+    margin-top: 200px;
 }
 
 .images h3{
@@ -66,4 +71,57 @@ img{
 
 .image-box img{
     border-radius: 3px;
+}
+
+
+.block{
+    animation: scrollreveal linear;
+    animation-timeline: view();
+}
+
+.filter-box{
+    width: 100%;
+    display: flex;
+    justify-content: right;
+    padding: 5px 45px 5px 0;
+}
+
+@keyframes scrollreveal{
+    from{
+        opacity: 0.8;
+        scale: 0.9;
+    }
+    to{
+        opacity: 1;
+        scale: 1;
+    }
+}
+
+
+.modal-insert{
+    display: none;
+    width: 500px;
+    height: 500px;
+    background-color: black;
+    position: absolute;
+    z-index: 100;
+}
+
+.modal-content p{
+    color: white;
+}
+
+.close-btn{
+    color: white;
+    text-align: right;
+}
+
+.close-x{
+    padding: 10px;
+    cursor: pointer;
+    transition-duration: .3s;
+}
+
+.close-x:hover{
+    background-color: gray;
 }

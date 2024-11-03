@@ -3,9 +3,9 @@
 if(!isset($_POST['enviado'])){
     header('Location: uploadpage.php');
 }
-
-    
+    // Define o diretorio que armazenará as imagens
     $target_dir = '../uploaded_files/';
+    
     $explode = explode(".", $_FILES["myfile"]["name"]);
     $target_file = rand(1,99999) . '.' . end($explode);
     $filetype = strtolower(pathinfo($target_file, PATHINFO_EXTENSION)); 
@@ -30,7 +30,7 @@ if(!isset($_POST['enviado'])){
     if($status == 0){
         echo "O arquivo nao pode ser enviado";
     }else{
-        include "conn.php";
+        include_once "conn.php";
         
         $statement = $conn->prepare("INSERT INTO files(id, nome, formato)
             VALUES('','$newname','$filetype')");
