@@ -5,7 +5,7 @@ if(isset($_POST['request'])){
 
     $req = $_POST['request'];
         if($req == 'latest'){
-            $sql = "SELECT * FROM files ORDER BY id DESC ";
+            $sql = "SELECT * FROM files ORDER BY id DESC LIMIT 9";
             $query = $conn->query($sql);
             $count = $query->rowCount(); //Faz a busca do número de resultados no banco de dados
     if($count > 0){    
@@ -25,7 +25,7 @@ if(isset($_POST['request'])){
         $count = $query->rowCount(); //Faz a busca do número de resultados no banco de dados
 
         if($results = $query->fetch(PDO::FETCH_ASSOC)){
-                $sql = "SELECT * FROM files ORDER BY id ASC ";
+                $sql = "SELECT * FROM files ORDER BY id ASC LIMIT 9";
                 $query = $conn->query($sql);
                 $count = $query->rowCount(); //Faz a busca do número de resultados no banco de dados
         if($count > 0){
@@ -37,8 +37,6 @@ if(isset($_POST['request'])){
                     echo "<br>";
                     echo "</div>";   
             }
-        }else{
-            echo "erro: resultados mais antigos";
         }
     }
 }

@@ -1,3 +1,17 @@
+body{
+    background-color: #1b263b;
+    color: #fff;
+} 
+
+.container-teste{
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
 .links{
     display: flex;
     justify-content: end;
@@ -67,6 +81,7 @@ img{
 
 .image-box{
     margin-bottom: 15px;
+    margin-top: 15px;
 }
 
 .image-box img{
@@ -97,18 +112,11 @@ img{
     }
 }
 
-
-.modal-insert{
-    display: none;
-    width: 500px;
-    height: 500px;
-    background-color: black;
-    position: absolute;
-    z-index: 100;
-}
-
-.modal-content p{
-    color: white;
+/* Botão para abrir modal de formulário de upload */
+.upload-btn{
+    text-decoration: none;
+    color: #fff;
+    font-weight: 600;
 }
 
 .close-btn{
@@ -116,12 +124,7 @@ img{
     text-align: right;
 }
 
-.close-x{
-    padding: 10px;
-    cursor: pointer;
-    transition-duration: .3s;
-}
-
-.close-x:hover{
-    background-color: gray;
+.menu{
+    margin-right: 20px;
+    padding-top: 10px;
 }
